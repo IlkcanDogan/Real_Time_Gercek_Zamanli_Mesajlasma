@@ -167,7 +167,7 @@ io.on('connection', (socket) => {
 
 });
 
-var port = 3001;
+var port = 443;
 
 http.listen(port, function () {
   //console.log('http://localhost:' + port + " adresi dinleniyor...");
