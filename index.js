@@ -135,7 +135,7 @@ io.on('connection', (socket) => {
         io.to(soketler[kullanici_adi]).emit('re-send',{
           durum: true
         });
-        console.log("bağlı olduğundaki veri: "+JSON.stringify(veri));
+        //console.log("bağlı olduğundaki veri: "+JSON.stringify(veri));
     }
     else {
       //#region BekleyenMesajlar
@@ -157,10 +157,10 @@ io.on('connection', (socket) => {
           io.to(soketler[kullanici_adi]).emit('re-send',{
             durum: true
           });
-          console.log("bağlı olmadığında veri: "+JSON.stringify(veri));
+          //console.log("bağlı olmadığında veri: "+JSON.stringify(veri));
         }
         else {
-          console.log("Bekleyen mesajlar istek hatası.");
+          //console.log("Bekleyen mesajlar istek hatası.");
         }
 
       });
@@ -177,13 +177,13 @@ io.on('connection', (socket) => {
   socket.on('mesaj-dizi', (dizi) => {
     let array = [];
     array = dizi;
-    console.log("data: " + JSON.stringify(array));
-    console.log("data uzunluk: " + array.length + "ka: "  + kullanici_adi);
+    //console.log("data: " + JSON.stringify(array));
+    //console.log("data uzunluk: " + array.length + "ka: "  + kullanici_adi);
   });
   
   socket.on('disconnect', () => {
     delete soketler[kullanici_adi]; // kullanıcı çıkış yaptığında socket idsini kaldır
-    console.log("bağlantısı kopan kullanıcı: " + kullanici_adi);
+    //console.log("bağlantısı kopan kullanıcı: " + kullanici_adi);
 
   });
 
@@ -192,5 +192,5 @@ io.on('connection', (socket) => {
 var port = 3001;
 
 http.listen(port, function () {
-  console.log('http://localhost:' + port + " adresi dinleniyor...");
+  //console.log('http://localhost:' + port + " adresi dinleniyor...");
 });
