@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
     }
 
     request({
-      url: "http://localhost/mesajtoken.php",
+      url: "https://ilkcandogan.com/mesajtoken.php",
       method: "POST",
       json: true,
       headers: header,
@@ -51,7 +51,7 @@ io.on('connection', (socket) => {
           }
 
           request({
-            url: "http://localhost/wmget.php",
+            url: "https://ilkcandogan.com/wmget.php",
             method: "POST",
             json: true,
             headers: header,
@@ -146,7 +146,7 @@ io.on('connection', (socket) => {
       }
 
       request({
-        url: "http://localhost/wm.php",
+        url: "https://ilkcandogan.com/wm.php",
         method: "POST",
         json: true,
         headers: header,
